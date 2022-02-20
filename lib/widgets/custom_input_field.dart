@@ -10,6 +10,8 @@ class CustomInputField extends StatelessWidget {
     final IconData? icon;
     final IconData? sufixIcon;
     final IconData? prefixIcon;
+    final TextInputType? keyboardType;
+    final bool isPassword;
     
     const CustomInputField({
       Key? key, 
@@ -20,6 +22,8 @@ class CustomInputField extends StatelessWidget {
       this.icon,
       this.sufixIcon, 
       this.prefixIcon, 
+      this.keyboardType, 
+      this.isPassword = false, 
     }) : super(key: key);
 
   @override
@@ -27,6 +31,8 @@ class CustomInputField extends StatelessWidget {
     return TextFormField(
       autofocus: false,
       initialValue: '',
+      keyboardType: keyboardType,
+      obscureText: isPassword,
       textCapitalization: TextCapitalization.words,
       onChanged: (value) {
         print(value);
