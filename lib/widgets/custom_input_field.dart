@@ -2,8 +2,24 @@ import 'package:fl_widgets/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomInputField extends StatelessWidget {
+    
+    final String? labelText;
+    final String? hintText;
+    final String? helperText;
+    final String? counterText;
+    final IconData? icon;
+    final IconData? sufixIcon;
+    final IconData? prefixIcon;
+    
     const CustomInputField({
-      Key? key,
+      Key? key, 
+      this.labelText, 
+      this.hintText, 
+      this.helperText, 
+      this.counterText, 
+      this.icon,
+      this.sufixIcon, 
+      this.prefixIcon, 
     }) : super(key: key);
 
   @override
@@ -21,15 +37,14 @@ class CustomInputField extends StatelessWidget {
       },
       autovalidateMode: AutovalidateMode.onUserInteraction,
       cursorColor: AppTheme.primary,
-      decoration:const InputDecoration(
-        hintText: 'Nombre del Usuario',
-        labelText: 'Nombre',
-        labelStyle: TextStyle(color: AppTheme.primary),
-        helperText: 'Ingresa tu nombre',
-        counterText: '3 caracteres',
-        suffixIcon: Icon(Icons.group_rounded, color: AppTheme.primary,),
-        // prefixIcon: Icon(Icons.group_rounded, color: AppTheme.primary,),
-        // icon: Icon(Icons.assignment_ind_rounded, color: AppTheme.primary,),
+      decoration: InputDecoration(
+        hintText: hintText,
+        labelText: labelText,
+        helperText: helperText,
+        counterText: counterText,
+        suffixIcon: icon == null ? null : Icon(sufixIcon),
+        prefixIcon: icon == null ? null : Icon(prefixIcon),
+        icon: icon == null ? null : Icon(icon),
       ),
     );
   }

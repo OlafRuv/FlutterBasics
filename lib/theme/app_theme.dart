@@ -39,6 +39,7 @@ class AppTheme{
     ),
 
     inputDecorationTheme: const InputDecorationTheme(
+      labelStyle: TextStyle(color: primary),
       floatingLabelStyle: TextStyle( color: primary),
       enabledBorder: OutlineInputBorder(      
         borderSide: BorderSide(color: primary),
