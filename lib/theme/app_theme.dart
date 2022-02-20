@@ -7,6 +7,8 @@ class AppTheme{
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     primaryColor: primary,
+    
+    //OverscrollColor
     colorScheme: ColorScheme.fromSwatch(
       accentColor: primary,
     ),

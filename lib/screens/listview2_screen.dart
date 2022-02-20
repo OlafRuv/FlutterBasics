@@ -1,4 +1,3 @@
-import 'package:fl_widgets/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class Listview2Screen extends StatelessWidget {
