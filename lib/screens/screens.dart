@@ -7,3 +7,4 @@ export 'package:fl_widgets/screens/inputs_screen.dart';
 export 'package:fl_widgets/screens/listview1_screen.dart';
 export 'package:fl_widgets/screens/listview2_screen.dart';
 export 'package:fl_widgets/screens/slider_screen.dart';
+export 'package:fl_widgets/screens/listview_screen.dart';
